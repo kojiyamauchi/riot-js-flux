@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/*==============================================================================
+
+ Add Name sass & CSS.
+
+ - Reset & Default Setting CSS.
+ - Font CSS.
+ - Parts CSS.
+ - Layout CSS.
+ - Responsive Media Queries.
+
+==============================================================================*/
+/*------------------------------------------------------------------------------
+ Reset & Default Setting CSS.
+------------------------------------------------------------------------------*/
+/* Reset CSS. */
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+a,
+address,
+article,
+aside,
+audio,
+blockquote,
+body,
+canvas,
+caption,
+code,
+dd,
+div,
+dl,
+dt,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+iframe,
+img,
+input,
+label,
+li,
+mark,
+menu,
+nav,
+ol,
+output,
+p,
+pre,
+ruby,
+section,
+span,
+summary,
+table,
+tbody,
+td,
+textarea,
+th,
+time,
+tr,
+ul,
+video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Default Setting */
+html {
+  width: 100%;
+  height: 100%;
+  background: #87a76f;
+}
+
+body {
+  position: relative;
+  /* Smart Phone Smooth Scroll */
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  letter-spacing: 0;
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  /* base font 16px */
+  font-size: 100%;
+  line-height: 1;
+  /* iOS font automatic adjustment none. */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:after,
+.clearfix:before {
+  display: block;
+  clear: both;
+  content: " ";
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  background: transparent;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: inherit;
+  /*@include opacity(1);*/
+}
+
+img {
+  vertical-align: middle;
+}
+
+li,
+ol,
+ul {
+  list-style-type: none;
+}
+
+table {
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="text"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+textarea {
+  resize: vertical;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: RGBa();
+}
+
+::selection {
+  background: RGBa();
+}
+
+::-moz-selection {
+  background: RGBa();
+}
+
+.displayPC {
+  display: block !important;
+}
+
+.displaySP {
+  display: none !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari Hack */
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  /* Chrome Hack */
+}
+
+@-moz-document url-prefix() {
+  /* FireFox Hack */
+}
+
+@media all and (-ms-high-contrast: none) {
+  /* IE Hack */
+}
+
+/*------------------------------------------------------------------------------
+  Font CSS.
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+  Parts CSS.
+------------------------------------------------------------------------------*/
+/* Add CSS.*/
+/*------------------------------------------------------------------------------
+  Layout CSS.
+------------------------------------------------------------------------------*/
+/* Add CSS.*/
+/*------------------------------------------------------------------------------
+  Responsive Media Queries.
+------------------------------------------------------------------------------*/
+/*
+  @media screen and (min-width:2061x){
+  // iMac 27inch.
+  }
+  @media screen and (min-width:1445px) and (max-width:2060px) {
+  // iMac 21.5inch.
+  }
+  @media screen and (min-width: 1285px) and (max-width:1444px)  {
+  // Large PC.
+  }
+  @media screen and (min-width: 992px) and (max-width:1284px) {
+  // Medium PC.
+  }
+  @media screen and (max-width: 991px) {
+  // Tablet.
+  }
+  */
+@media screen and (max-width: 768px) {
+  .displayPC {
+    display: none !important;
+  }
+  .displaySP {
+    display: block !important;
+  }
+}
+
+/*
+@media screen and (max-width:480px) {
+// Small Smart Phone.
+html {
+font-size: addBaseFontSize ;
+}
+}
+@media screen and (max-width:385px) {
+// Extra Small Smart Phone.
+html (
+font-size: addBaseFontSize ;
+)
+}
+
+// Mac PC Default Window Width.
+// -iMac 27inch & iMac 27inch Retina Display-
+// width: 2560;
+
+// -iMac 21.5inch-
+// width: 2048;
+
+// -MacBook Pro 15inch Retina Display-
+// width: 1440;
+
+// -MacBook Pro 13inch Retina Display-
+// width: 1440;
+
+// -MacBook Air 13inch-
+// width: 1440;
+
+// -MacBook Air 11inch-
+// width: 1366;
+
+// -MacBook 12inch Retina Display-
+// width: 1280;
+*/
