@@ -21,6 +21,14 @@
           color: #888888;
           transform: translate(25%,0);
           opacity: 0;
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+              /* Safari Hack */
+              height: 500px;
+          }
+          @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+              /* Chrome Hack */
+              height: auto;
+          }
           &.on {
             transition: all 0.5s ease-out 0.5s;
             transform: translate(0,0);
