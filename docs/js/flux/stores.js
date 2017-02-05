@@ -8,21 +8,21 @@ TodoStore = function () {
     var self = this;
 
     self.lists = [{
-        img: "../images/outer.svg",
+        img: "images/outer.svg",
         name: "My Outer",
         price: 15000,
         stock: 16,
         id: 1
     },
     {
-        img: "../images/tshirts.svg",
+        img: "images/tshirts.svg",
         name: "My T-Shirts",
         price: 6000,
         stock: 10,
         id: 2
     },
     {
-        img: "../images/sneaker.svg",
+        img: "images/sneaker.svg",
         name: "My Sneaker",
         price: 5000,
         stock: 18,
@@ -30,7 +30,7 @@ TodoStore = function () {
     }];
 
     self.list = [{
-        img: "../images/empty.svg",
+        img: "images/empty.svg",
         name: "Empty Cart",
         price: 0,
         total: 0
