@@ -10,8 +10,6 @@
   :scope {
     display: block;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     padding: 0 0 8px 0;
     p {
       font-family: Lobster,cursive;

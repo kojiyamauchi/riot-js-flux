@@ -7,7 +7,11 @@ TodoStore = function () {
 
     var self = this;
 
-    self.lists = [{
+    self.lists = [];
+
+    self.list = [];
+
+    var lists = [{
         img: "images/outer.svg",
         name: "My Outer",
         price: 15000,
@@ -29,7 +33,7 @@ TodoStore = function () {
         id: 3
     }];
 
-    self.list = [{
+    var list = [{
         img: "images/empty.svg",
         name: "Empty Cart",
         price: 0,
@@ -37,14 +41,17 @@ TodoStore = function () {
     }];
 
     self.on('init_cart', function () {
+        self.lists = lists;
+        self.list = list;
         self.trigger('changes_product', self.lists);
         self.trigger('changes_cart', self.list);
-        console.log('init!');
     });
 
     self.on('reset_cart', function () {
-        self.trigger('init_cart');
-        console.log('reset!');
+        self.lists = lists;
+        self.list = list;
+        self.trigger('changes_product', self.lists);
+        self.trigger('changes_cart', self.list);
     });
 
     self.on('add_cart', function (task) {
@@ -61,7 +68,6 @@ TodoStore = function () {
         });
         self.trigger('changes_product', self.lists);
         self.trigger('changes_cart', self.list);
-        console.log('add!');
     });
 
 };

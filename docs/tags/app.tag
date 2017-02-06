@@ -21,6 +21,7 @@
           -ms-flex-pack: justify;
           justify-content: space-between;
           padding: 0 20px;
+          margin: 0 0 12px 0;
           }
         </style>
         <!-- CSS End. -->
