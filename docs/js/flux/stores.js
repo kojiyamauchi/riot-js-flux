@@ -7,11 +7,7 @@ TodoStore = function () {
 
     var self = this;
 
-    self.lists = [];
-
-    self.list = [];
-
-    var lists = [{
+    self.lists = [{
         img: "images/outer.svg",
         name: "My Outer",
         price: 15000,
@@ -33,7 +29,7 @@ TodoStore = function () {
         id: 3
     }];
 
-    var list = [{
+    self.list = [{
         img: "images/empty.svg",
         name: "Empty Cart",
         price: 0,
@@ -41,15 +37,11 @@ TodoStore = function () {
     }];
 
     self.on('init_cart', function () {
-        self.lists = lists;
-        self.list = list;
         self.trigger('changes_product', self.lists);
         self.trigger('changes_cart', self.list);
     });
 
     self.on('reset_cart', function () {
-        self.lists = lists;
-        self.list = list;
         self.trigger('changes_product', self.lists);
         self.trigger('changes_cart', self.list);
     });

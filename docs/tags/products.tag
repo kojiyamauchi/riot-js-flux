@@ -148,6 +148,7 @@
         product = this;
         product.lists = [];
 
+        // stores.jsの関数'changes_product'が、トリガされたら、'changes_product'のlistsをself.listsへ代入・update!!
         RiotControl.on('changes_product', function(lists) {
           product.lists = lists;
           product.update();
