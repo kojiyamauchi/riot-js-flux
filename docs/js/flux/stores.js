@@ -11,21 +11,21 @@ TodoStore = function () {
         img: "images/outer.svg",
         name: "My Outer",
         price: 15000,
-        stock: 3,
+        stock: 8,
         id: 1
     },
     {
         img: "images/tshirts.svg",
         name: "My T-Shirts",
         price: 6000,
-        stock: 8,
+        stock: 14,
         id: 2
     },
     {
         img: "images/sneaker.svg",
         name: "My Sneaker",
         price: 5000,
-        stock: 6,
+        stock: 12,
         id: 3
     }];
 
