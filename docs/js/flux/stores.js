@@ -41,10 +41,6 @@ TodoStore = function () {
         self.trigger('changes_cart', self.list);
     });
 
-    self.on('reset_cart', function () {
-        location.reload();
-    });
-
     self.on('add_cart', function (task) {
         self.lists.some(function (reference) {
             if(reference.id === task.id) {
@@ -59,6 +55,10 @@ TodoStore = function () {
         });
         self.trigger('changes_product', self.lists);
         self.trigger('changes_cart', self.list);
+    });
+
+    self.on('reset_cart', function () {
+        location.reload();
     });
 
 };
