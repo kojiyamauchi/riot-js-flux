@@ -89,6 +89,7 @@
               }
             }
             button {
+              cursor: pointer;
               border: none;
               border-radius: 6px;
               width: 300px;

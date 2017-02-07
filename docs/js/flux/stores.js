@@ -11,21 +11,21 @@ TodoStore = function () {
         img: "images/outer.svg",
         name: "My Outer",
         price: 15000,
-        stock: 16,
+        stock: 3,
         id: 1
     },
     {
         img: "images/tshirts.svg",
         name: "My T-Shirts",
         price: 6000,
-        stock: 10,
+        stock: 8,
         id: 2
     },
     {
         img: "images/sneaker.svg",
         name: "My Sneaker",
         price: 5000,
-        stock: 18,
+        stock: 6,
         id: 3
     }];
 
@@ -42,8 +42,7 @@ TodoStore = function () {
     });
 
     self.on('reset_cart', function () {
-        self.trigger('changes_product', self.lists);
-        self.trigger('changes_cart', self.list);
+        location.reload();
     });
 
     self.on('add_cart', function (task) {
