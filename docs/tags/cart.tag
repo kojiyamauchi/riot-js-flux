@@ -6,7 +6,7 @@
       <imgbox><img src="{ img }"></imgbox>
       <pdname>{ name }</pdname>
       <totalprice><span>Total Price</span>¥ { price }</totalprice>
-      <count id="price"><span>Total Number</span>{ total }</count>
+      <count><span>Total Number</span>{ total }</count>
       <button onclick={ reset } disabled= { total == 0 }>Reset</button>
       </inner>
       <!-- Insert Components End. -->
@@ -145,7 +145,6 @@
         cart = this;
         cart.list = [];
 
-        // stores.jsの関数'changes_cart'が、トリガされたら、'changes_cart'のlistをself.listへ代入・update!!
         RiotControl.on('changes_cart', function(list) {
           cart.list = list;
           cart.update();
