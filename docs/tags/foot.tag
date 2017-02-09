@@ -2,7 +2,7 @@
 <foot>
 
   <!-- Insert Components / Layout -->
-  <p>Copyright All The Small Things, All Rights Reserved.</p>
+  <p><a href="http://kojiyamauchi.com">Copyright All The Small Things, All Rights Reserved.</a></p>
   <!-- Insert Components End. -->
 
   <!-- CSS Definition. Using Sass. -->
