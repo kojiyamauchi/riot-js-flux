@@ -6,7 +6,7 @@
         <imgbox><img src="{ img }"></imgbox>
         <description>
         <pdname>{ name }</pdname>
-        <price>¥ { price }</price>
+        <price>¥ <span class={ addComma: true }></span><span class={ checkPrice: true }>{ price }</span></price>
         <stock><span>Shop Stock</span>{ stock }</stock>
         <button onclick={ add } disabled= { stock == 0 }>{ stock > 0 ? 'Add Cart' : 'Sold' }</button>
         </description>
@@ -75,6 +75,17 @@
                 display: block;
                 font-size: 20px;
                 margin: 0 0 5px 0;
+                span {
+                  &.addComma {
+                    font-size: 20px;
+                  }
+                  &.checkPrice {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                  }
+                }
               }
               stock {
                 display: block;

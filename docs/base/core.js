@@ -22,6 +22,21 @@ var jQuery = require('jQuery');
 
 jQuery(function ($) {
 
+    // Intro Animations.
     $('.displayed').addClass('on');
+
+    // Price Add Comma.
+    // Products.tag
+    $('price .checkPrice').each(function () {
+        var getDOM = $(this),
+            addComma = getDOM.text().toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+        getDOM.prev('.addComma').text(addComma);
+    });
+    // Cart.tag
+    $('totalprice .checkPrice').on('DOMSubtreeModified propertychange', function () {
+        var getDOM = $(this),
+            addComma = getDOM.text().toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+        getDOM.prev('.addComma').text(addComma);
+    });
 
 });

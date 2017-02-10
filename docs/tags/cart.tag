@@ -5,7 +5,7 @@
       <inner each={ list }>
       <imgbox><img src="{ img }"></imgbox>
       <pdname>{ name }</pdname>
-      <totalprice><span>Total Price</span>¥ { price }</totalprice>
+      <totalprice><span id="totalPrice">Total Price</span>¥ <span class={ addComma: true }>0</span><span class={ checkPrice: true }>{ price }</span></totalprice>
       <count><span>Total Number</span>{ total }</count>
       <button onclick={ reset } disabled= { total == 0 }>Reset</button>
       </inner>
@@ -73,15 +73,26 @@
               font-size: 22px;
               margin: 0 0 8px 0;
               span {
+                &#totalPrice {
                 font-size: 18px;
                 margin: 0 8px 0 0;
+                }
+                &.addComma {
+                  font-size: 22px;
+                }
+                &.checkPrice {
+                  display: inline-block;
+                  width: 0;
+                  height: 0;
+                  opacity: 0;
+                }
               }
             }
             count {
               display: block;
               font-size: 20px;
-              margin: 0 0 8px 0;
               font-weight: bold;
+              margin: 0 0 8px 0;
               span {
                 font-size: 16px;
                 margin: 0 8px 0 0;
