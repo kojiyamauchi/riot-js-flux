@@ -2,7 +2,7 @@
 <foot>
 
   <!-- Insert Components / Layout -->
-  <p><a href="http://kojiyamauchi.com">Copyright All The Small Things, All Rights Reserved.</a></p>
+  <p><a href="http://kojiyamauchi.com" target="_blank">Copyright All The Small Things, All Rights Reserved.</a></p>
   <!-- Insert Components End. -->
 
   <!-- CSS Definition. Using Sass. -->
@@ -12,11 +12,20 @@
     width: 100%;
     padding: 0 0 8px 0;
     p {
-      font-family: Lobster,cursive;
-      color: #fff;
       text-align: center;
-      font-size: 20px;
-      text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+      a {
+        font-family: Lobster,cursive;
+        color: #fff !important;
+        font-size: 20px;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+        display: inline-block;
+        transform: scale(1);
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(0.95);
+          transition: all 0.5s;
+        }
+      }
     }
   }
   </style>

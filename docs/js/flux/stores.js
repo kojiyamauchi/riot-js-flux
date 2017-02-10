@@ -30,7 +30,7 @@ TodoStore = function () {
     }];
 
     self.list = [{
-        img: "images/empty.svg",
+        img: "images/cart.svg",
         name: "Empty Cart",
         price: 0,
         total: 0
