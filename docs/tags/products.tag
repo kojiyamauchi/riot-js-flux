@@ -7,7 +7,7 @@
         <description>
         <pdname>{ name }</pdname>
         <price>¥ <span class={ addComma: true }></span><span class={ checkPrice: true }>{ price }</span></price>
-        <stock><span>Shop Stock</span>{ stock }</stock>
+        <stock><span class={ shopStock: true }>Shop Stock</span><span class={ stockNumber: true }>{ stock }</span></stock>
         <button onclick={ add } disabled= { stock == 0 }>{ stock > 0 ? 'Add Cart' : 'Sold' }</button>
         </description>
       </detail>
@@ -57,6 +57,12 @@
               line-height: 150px;
               img {
                 height: 150px;
+                transform: scale(1);
+                transition: transform 0.5s;
+                &.sold {
+                  transform: scale(0.8);
+                  transition: transform 0.5s
+                }
               }
             }
             description {
@@ -89,13 +95,17 @@
               }
               stock {
                 display: block;
-                font-size: 16px;
                 margin: 0 0 14px 0;
-                font-weight: bold;
                 span {
-                  font-size: 12px;
-                  margin: 0 6px 0 0;
-                  font-weight: normal;
+                  &.shopStock {
+                    font-size: 12px;
+                    margin: 0 6px 0 0;
+                    font-weight: normal;
+                  }
+                  &.stockNumber {
+                    font-size: 16px;
+                    font-weight: bold;
+                  }
                 }
               }
               button {

@@ -39,4 +39,14 @@ jQuery(function ($) {
         getDOM.prev('.addComma').text(addComma);
     });
 
+    $('stock .stockNumber').each(function () {
+        var _this = $(this);
+        _this.on('DOMSubtreeModified propertychange', function () {
+            var number = _this.text();
+            if(number === '0') {
+                _this.parents('detail').find('img').addClass('sold');
+            }
+        });
+    });
+
 });
