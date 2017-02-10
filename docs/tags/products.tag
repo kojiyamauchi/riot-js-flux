@@ -60,7 +60,7 @@
                 transform: scale(1);
                 transition: transform 0.5s;
                 &.sold {
-                  transform: scale(0.8);
+                  transform: scale(0.65);
                   transition: transform 0.5s
                 }
               }

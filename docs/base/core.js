@@ -39,6 +39,7 @@ jQuery(function ($) {
         getDOM.prev('.addComma').text(addComma);
     });
 
+    // If status sold out, img scale animation.
     $('stock .stockNumber').each(function () {
         var _this = $(this);
         _this.on('DOMSubtreeModified propertychange', function () {
