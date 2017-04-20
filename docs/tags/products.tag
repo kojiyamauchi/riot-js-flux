@@ -68,7 +68,7 @@
             description {
               display: inline-block;
               width: 50%;
-              color: #888888;
+              color: #999999;
               padding: 20px 0;
               pdname {
                 display: block;
@@ -115,7 +115,7 @@
                 width: 200px;
                 height: 26px;
                 color: #fff;
-                background-color: #cccccc;
+                background-color: #999999;
                 font-size: 16px;
                 padding: 0;
                 opacity: 1;
@@ -137,8 +137,8 @@
                   cursor: default;
                   opacity: 1;
                   background-color: #fff;
-                  border: solid 2px #cccccc;
-                  color: #cccccc;
+                  border: solid 2px #999999;
+                  color: #999999;
                   position: relative;
                   transform: scale(0.9);
                   transition: transform 0.5s;
@@ -146,7 +146,7 @@
                     display: inline-block;
                     content: " ";
                     width: 100px;
-                    border-bottom: solid 2px #cccccc;
+                    border-bottom: solid 2px #999999;
                     position: absolute;
                     left: 50%;
                     top: 50%;
