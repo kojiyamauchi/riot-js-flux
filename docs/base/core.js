@@ -8,6 +8,7 @@ require('../tags/subtitle.tag');
 require('../tags/app.tag');
 require('../tags/products.tag');
 require('../tags/cart.tag');
+require('../tags/back-github.tag');
 require('../tags/foot.tag');
 //require('../tags/default.tag');
 
@@ -24,6 +25,11 @@ jQuery(function ($) {
 
     // Intro Animations.
     $('.displayed').addClass('on');
+
+    // For GitHub Back Button.
+    setTimeout(function () {
+        $('back-github').addClass('alpha').removeClass('on');
+    }, 1300);
 
     // Price Add Comma.
     // Products.tag

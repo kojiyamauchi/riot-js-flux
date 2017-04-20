@@ -20,10 +20,10 @@
         text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
         display: inline-block;
         transform: scale(1);
-        transition: all 0.5s;
+        transition: transform 0.5s;
         &:hover {
           transform: scale(0.95);
-          transition: all 0.5s;
+          transition: transform 0.5s;
         }
       }
     }

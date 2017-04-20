@@ -3,6 +3,7 @@
         <!-- Insert Components / Layout -->
         <products></products>
         <cart></cart>
+        <back-github></back-github>
         <!-- Insert Components End. -->
 
         <!-- CSS Definition. Using Sass. -->
