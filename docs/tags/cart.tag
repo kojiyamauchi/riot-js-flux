@@ -151,10 +151,11 @@
         <script>
         // Require Actions.js
         var TodoAction = require('../js/flux/actions'),
-        TodoStore = require('../js/flux/stores');
-        RiotControl = require('riotcontrol');
-
+        TodoStore = require('../js/flux/stores'),
+        RiotControl = require('riotcontrol'),
         cart = this;
+
+
         cart.list = [];
 
         RiotControl.on('changes_cart', function(list) {

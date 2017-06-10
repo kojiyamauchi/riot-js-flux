@@ -164,9 +164,9 @@
         <!-- JavaScript / Logic -->
         <script>
         var TodoAction = require('../js/flux/actions'),
-        RiotControl = require('riotcontrol');
-
+        RiotControl = require('riotcontrol'),
         product = this;
+
         product.lists = [];
 
         RiotControl.on('changes_product', function(lists) {
