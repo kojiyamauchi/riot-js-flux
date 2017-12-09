@@ -34,7 +34,9 @@ gulp.task('webpack', function () {
 gulp.task('jsmin', function () {
   gulp.src('js/core.js')
     .pipe(jsmin({
-      preserveComments: 'some'
+      output: {
+        comments: /^!/
+      }
     }))
     .pipe(rename({
       suffix: '.min'

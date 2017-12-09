@@ -64,39 +64,39 @@ time,
 tr,
 ul,
 video {
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    border: 0;
-    font-size: 100%;
-    font-weight: normal;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
 }
 /* Default Setting */
 html {
-    width: 100%;
-    height: 100%;
-    background: #87a76f;
+  width: 100%;
+  height: 100%;
+  background: #87a76f;
 }
 
 body {
-    position: relative;
-    /* Smart Phone Smooth Scroll */
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    max-width: 1440px;
-    min-width: 1024px;
-    height: 100%;
-    margin: 0 auto;
-    letter-spacing: 0;
-    color: #000;
-    font-family: "Helvetica Neue", Helvetica, arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    /* base font 16px */
-    font-size: 100%;
-    line-height: 1;
-    /* iOS font automatic adjustment none. */
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+  position: relative;
+  /* Smart Phone Smooth Scroll */
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  letter-spacing: 0;
+  color: #000;
+  font-family: 'Helvetica Neue', Helvetica, arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  /* base font 16px */
+  font-size: 100%;
+  line-height: 1;
+  /* iOS font automatic adjustment none. */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 article,
@@ -110,116 +110,116 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 .clearfix:after,
 .clearfix:before {
-    display: block;
-    clear: both;
-    content: " ";
+  display: block;
+  clear: both;
+  content: ' ';
 }
 
 a {
-    text-decoration: none;
-    color: #000;
-    background: transparent;
+  text-decoration: none;
+  color: #000;
+  background: transparent;
 }
 
 a:active,
 a:hover,
 a:link,
 a:visited {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 a:hover {
-    color: inherit;
-    // 親要素の継承
-    /*@include opacity(1);*/
+  color: inherit;
+  // 親要素の継承
+  /*@include opacity(1);*/
 }
 
 a.current {}
 
 img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 li,
 ol,
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 table {
-    table-layout: fixed;
-    border-spacing: 0;
-    border-collapse: collapse;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
-input[type="button"],
-input[type="submit"],
-input[type="text"] {
-    border-radius: 0;
-    -webkit-appearance: none;
+input[type='button'],
+input[type='submit'],
+input[type='text'] {
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 textarea {
-    resize: vertical;
-    border-radius: 0;
-    -webkit-appearance: none;
+  resize: vertical;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
 }
 
 ::selection {
-    background: RGBa();
+  background: RGBa();
 }
 
 ::-moz-selection {
-    background: RGBa();
+  background: RGBa();
 }
 
 .displayPC {
-    display: block !important;
+  display: block !important;
 }
 
 .displaySP {
-    display: none !important;
+  display: none !important;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    /* Safari Hack */
-    * {
-        // Add Property.
-    }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari Hack */
+  * {
+    // Add Property.
+  }
 }
-@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-    /* Chrome Hack */
-    * {
-        // Add Property.
-    }
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  /* Chrome Hack */
+  * {
+    // Add Property.
+  }
 }
 @-moz-document url-prefix() {
-    /* FireFox Hack */
-    * {
-        // Add Property.
-    }
+  /* FireFox Hack */
+  * {
+    // Add Property.
+  }
 }
-@media all and (-ms-high-contrast:none) {
-    /* IE Hack */
-    * {
-        // Add Property.
-    }
+@media all and (-ms-high-contrast: none) {
+  /* IE Hack */
+  * {
+    // Add Property.
+  }
 }
 /*------------------------------------------------------------------------------
   Font CSS.
@@ -239,9 +239,9 @@ h6 {}
 p {}
 
 dl {
-    dt {}
+  dt {}
 
-    dd {}
+  dd {}
 }
 /*------------------------------------------------------------------------------
   Parts CSS.
@@ -272,14 +272,14 @@ dl {
   }
   */
 @media screen and (max-width: 768px) {
-    // Smart Phone.
-    .displayPC {
-        display: none !important;
-    }
+  // Smart Phone.
+  .displayPC {
+    display: none !important;
+  }
 
-    .displaySP {
-        display: block !important;
-    }
+  .displaySP {
+    display: block !important;
+  }
 }
 /*
 @media screen and (max-width:480px) {
@@ -317,4 +317,5 @@ font-size: addBaseFontSize ;
 // -MacBook 12inch Retina Display-
 // width: 1280;
 */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
 @import url(https://fonts.googleapis.com/css?family=Lobster);

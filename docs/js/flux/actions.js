@@ -1,17 +1,17 @@
 // Flux Architecture, -Action- Script.
-var RiotControl = require('riotcontrol'),
-  TodoAction;
+import RiotControl from 'riotcontrol'
+let TodoAction
 
 TodoAction = {
-  initCart: function () {
-    RiotControl.trigger('init_cart');
+  initCart: () => {
+    RiotControl.trigger('init_cart')
   },
-  addCart: function (_target) {
-    RiotControl.trigger('add_cart', _target);
+  addCart: _target => {
+    RiotControl.trigger('add_cart', _target)
   },
-  resetCart: function () {
-    RiotControl.trigger('reset_cart');
+  resetCart: () => {
+    RiotControl.trigger('reset_cart')
   }
-};
+}
 
-module.exports = TodoAction; // Require This Flie. Using Node.js, module.exports.
+module.exports = TodoAction // Require This Flie. Using Node.js, module.exports.

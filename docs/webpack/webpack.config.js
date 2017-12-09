@@ -14,7 +14,7 @@ module.exports = {
       exclude: /node_modules/,
       use: [
       {
-        loader: 'riotjs-loader',
+        loader: 'riot-tag-loader',
         options: {
           debug: true
         }

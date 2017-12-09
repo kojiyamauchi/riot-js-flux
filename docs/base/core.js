@@ -1,71 +1,85 @@
 // Riot JS Script. /////////////////////////////////////////////////////////////
-var riot = require('riot'),
-  RiotControl = require('riotcontrol'),
-  TodoStore = require('../js/flux/stores');
+// Import Package & Script.
+import riot from 'riot'
+import RiotControl from 'riotcontrol'
+import TodoStore from '../js/flux/stores'
+import 'babel-polyfill'
 
-require('../tags/heading.tag');
-require('../tags/subtitle.tag');
-require('../tags/app.tag');
-require('../tags/products.tag');
-require('../tags/cart.tag');
-require('../tags/back-github.tag');
-require('../tags/foot.tag');
+// Import tag.
+import '../tags/heading.tag'
+import '../tags/subtitle.tag'
+import '../tags/app.tag'
+import '../tags/products.tag'
+import '../tags/cart.tag'
+import '../tags/back-github.tag'
+import '../tags/foot.tag'
 //require('../tags/default.tag');
 
-RiotControl.addStore(new TodoStore);
-riot.mount('*');
-
+RiotControl.addStore(new TodoStore())
+riot.mount('*')
 
 // jQuery Script. //////////////////////////////////////////////////////////////
-'use strict';
+;('use strict')
 
-var jQuery = require('jQuery');
+var jQuery = require('jQuery')
 
-jQuery(function ($) {
-
+jQuery(function($) {
   function addedClass() {
     // Intro Animations.
-    $('.displayed').addClass('on');
+    $('.displayed').addClass('on')
   }
-  addedClass();
+  addedClass()
 
   function addedComma() {
     // Price Add Comma.
     // Products.tag
-    $('price .checkPrice').each(function () {
+    $('price .checkPrice').each(function() {
       var getDOM = $(this),
-        addComma = getDOM.text().toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
-      getDOM.prev('.addComma').text(addComma);
-    });
+        addComma = getDOM
+          .text()
+          .toString()
+          .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')
+      getDOM.prev('.addComma').text(addComma)
+    })
     // Cart.tag
-    $('totalprice .checkPrice').on('DOMSubtreeModified propertychange', function () {
-      var getDOM = $(this),
-        addComma = getDOM.text().toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
-      getDOM.prev('.addComma').text(addComma);
-    });
+    $('totalprice .checkPrice').on(
+      'DOMSubtreeModified propertychange',
+      function() {
+        var getDOM = $(this),
+          addComma = getDOM
+            .text()
+            .toString()
+            .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')
+        getDOM.prev('.addComma').text(addComma)
+      }
+    )
   }
-  addedComma();
+  addedComma()
 
   function soldOut() {
     // If status sold out, img scale animation.
-    $('stock .stockNumber').each(function () {
-      var _this = $(this);
-      _this.on('DOMSubtreeModified propertychange', function () {
-        var number = _this.text();
-        if(number === '0') {
-          _this.parents('detail').find('img').addClass('sold');
+    $('stock .stockNumber').each(function() {
+      var _this = $(this)
+      _this.on('DOMSubtreeModified propertychange', function() {
+        var number = _this.text()
+        if (number === '0') {
+          _this
+            .parents('detail')
+            .find('img')
+            .addClass('sold')
         }
-      });
-    });
+      })
+    })
   }
-  soldOut();
+  soldOut()
 
   function addedBackButton() {
     // For GitHub Back Button.
-    setTimeout(function () {
-      $('back-github').addClass('alpha').removeClass('on');
-    }, 1300);
+    setTimeout(function() {
+      $('back-github')
+        .addClass('alpha')
+        .removeClass('on')
+    }, 1300)
   }
-  addedBackButton();
-
-});
+  addedBackButton()
+})

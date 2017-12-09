@@ -1,0 +1,5 @@
+.DS_Store
+docs/node_modules
+docs/fonts
+docs/tags/default.tag
+docs/css/font-awesome.min.css

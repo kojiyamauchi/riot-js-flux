@@ -14,6 +14,7 @@
  Reset & Default Setting CSS.
 ------------------------------------------------------------------------------*/
 /* Reset CSS. */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 a,
 address,
@@ -92,7 +93,7 @@ body {
   margin: 0 auto;
   letter-spacing: 0;
   color: #000;
-  font-family: "Helvetica Neue", Helvetica, arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   /* base font 16px */
   font-size: 100%;
   line-height: 1;
@@ -123,7 +124,7 @@ section {
 .clearfix:before {
   display: block;
   clear: both;
-  content: " ";
+  content: ' ';
 }
 
 a {
@@ -161,9 +162,9 @@ table {
   border-collapse: collapse;
 }
 
-input[type="button"],
-input[type="submit"],
-input[type="text"] {
+input[type='button'],
+input[type='submit'],
+input[type='text'] {
   border-radius: 0;
   -webkit-appearance: none;
 }
@@ -175,6 +176,7 @@ textarea {
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -ms-box-sizing: border-box;
 }
