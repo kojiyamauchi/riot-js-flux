@@ -6833,14 +6833,15 @@ _riotcontrol2.default.addStore(new _stores2.default());
 // Riot JS Script. /////////////////////////////////////////////////////////////
 // Import Package & Script.
 
-_riot2.default.mount('*')
+_riot2.default.mount('*');
 
 // jQuery Script. //////////////////////////////////////////////////////////////
-;'use strict';
+'use strict';
 
 var jQuery = __webpack_require__(338);
 
 jQuery(function ($) {
+
   function addedClass() {
     // Intro Animations.
     $('.displayed').addClass('on');
