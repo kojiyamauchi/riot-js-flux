@@ -180,7 +180,7 @@
       TodoAction.initCart();
     });
 
-    this.add = () => {
+    this.add = function () {
       var target = this;
       TodoAction.addCart(target);
       return target = this;
