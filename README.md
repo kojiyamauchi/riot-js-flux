@@ -1,8 +1,8 @@
-# Riot.js & Riot Control<br>
-
-## Flux Architecture.<br>
+# Riot.js & Riot Control
 
 <https://kojiyamauchi.github.io/riot_js_flux/>
+
+## Flux Architecture.<br>
 
 Action ( js/flux/actions.js )<br>
 ↓<br>
