@@ -17,13 +17,12 @@ import  rename from 'gulp-rename' // File Rename PlugIn.
 import  del from 'del' // File Delete, Not Gulp PlugIn.
 import  ftp from 'vinyl-ftp' // ftp plugin.
 import  sftp from 'gulp-sftp' // sftp plugin.
-import  using_PHP_LocalServerConnect from 'gulp-connect-php' // using php local server connect plugin.
 import  browserSync from 'browser-sync' // local browser sync plugin.
 
 const  noCompressionImagesFold = (['noCompressionImages/*.jpg', 'noCompressionImages/*.jpeg', 'noCompressionImages/*.png', 'noCompressionImages/*.gif', 'noCompressionImages/*.svg']) // no compression images fold.
 const  compressionImageFold = ('images/') // finish compression images fold.
-const  upLoadFileWrite = (['index.php', '*.html', 'css/*.css', 'css/**/*', 'css/*.css.map', 'sass/*.scss', 'js/*.js', 'images/*', 'font/*', 'maps']) // upload file write.
-const  notUpLoadFileWrite = (['!css/ie.css', '!css/print.css', '!css/screen.css', '!css/ie.css.map', '!css/print.css.map', '!css/screen.css.map', '!sass/ie.scss', '!sass/print.scss', '!sass/screen.scss', '!**/.DS_Store', '!node_modules/**/*']) // don't upload file write.
+const  upLoadFileWrite = (['*.html', 'css/*.css', 'css/**/*', 'css/*.css.map', 'sass/*.scss', 'js/*.js', 'images/*', 'font/*', 'maps']) // upload file write.
+const  notUpLoadFileWrite = (['!**/.DS_Store', '!node_modules/**/*']) // don't upload file write.
 const  upLoadFile = upLoadFileWrite.concat(notUpLoadFileWrite) //ftp upload file. variable upLoadFileWrite concatenate variable notUpLoadFileWrite.
 
 // webpack.
@@ -108,16 +107,13 @@ gulp.task('delete', cb =>  {
 
 // local browser connect & sync.
 gulp.task('browserSync',  () => {
-  return using_PHP_LocalServerConnect.server({
-    port: 8080,
-    bin: '/Applications/MAMP/bin/php/php5.6.10/bin/php', // PHP pass.
-    ini: '/Applications/MAMP/bin/php/php5.6.10/conf/php.ini' // PHP.ini pass.
-  }, () => {
-    browserSync({
-      proxy: 'localhost:8080',
-      notify: false,
-      browser: 'google chrome'
-    });
+  return browserSync({
+    browser: 'google chrome',
+    notify: false,
+    server: {
+      baseDir: '.',
+      index: 'index.html'
+    }
   });
 });
 
